@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>React Shopping Cart App using Fake Store API</title>
 </head>
 <body>
 
-  <h1>React Shopping Cart App</h1>
+  <h1>React Shopping Cart App using Fake Store API</h1>
 
   <p>This project is a React-based shopping cart application that utilizes Redux for state management and interacts with the FakeStoreAPI to fetch product data.</p>
 
