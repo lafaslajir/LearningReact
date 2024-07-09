@@ -21,12 +21,10 @@
   │   ├── components/
   │   │   ├── Header.js         <!-- Header component -->
   │   │   ├── Footer.js         <!-- Footer component -->
-  │   │   └── ...               <!-- Other reusable UI components -->
   │   ├── pages/
   │   │   ├── HomePage.js       <!-- Home page component -->
   │   │   ├── CartPage.js       <!-- Cart page component -->
   │   │   ├── ProductPage.js    <!-- Product page component -->
-  │   │   └── ...               <!-- Other page components -->
   │   ├── actions/
   │   │   ├── productActions.js <!-- Redux actions for products -->
   │   │   └── cartActions.js    <!-- Redux actions for cart -->
