@@ -18,24 +18,24 @@
   │   └── ...
   ├── src/
   │   ├── components/
-  │   │   ├── Header.js         <!-- Header component -->
-  │   │   ├── Footer.js         <!-- Footer component -->
+  │   │   ├── Header.js         -- Header component 
+  │   │   ├── Footer.js         -- Footer component
   │   ├── pages/
-  │   │   ├── HomePage.js       <!-- Home page component -->
-  │   │   ├── CartPage.js       <!-- Cart page component -->
-  │   │   ├── ProductPage.js    <!-- Product page component -->
+  │   │   ├── HomePage.js       -- Home page component
+  │   │   ├── CartPage.js       -- Cart page component 
+  │   │   ├── ProductPage.js    -- Product page component 
   │   ├── actions/
-  │   │   ├── productActions.js <!-- Redux actions for products -->
-  │   │   └── cartActions.js    <!-- Redux actions for cart -->
+  │   │   ├── productActions.js -- Redux actions for products
+  │   │   └── cartActions.js    -- Redux actions for cart 
   │   ├── reducers/
-  │   │   ├── index.js          <!-- Root reducer combining all reducers -->
-  │   │   ├── productReducer.js <!-- Reducer for products -->
-  │   │   └── cartReducer.js    <!-- Reducer for cart -->
+  │   │   ├── index.js          -- Root reducer combining all reducers 
+  │   │   ├── productReducer.js -- Reducer for products 
+  │   │   └── cartReducer.js    -- Reducer for cart 
   │   ├── store/
-  │   │   └── store.js          <!-- Redux store configuration -->
-  │   ├── App.css               <!-- Global CSS styles -->
-  │   ├── App.js                <!-- Root component with routing -->
-  │   └── index.js              <!-- Entry point of the application -->
+  │   │   └── store.js          -- Redux store configuration 
+  │   ├── App.css               -- Global CSS styles 
+  │   ├── App.js                -- Root component with routing 
+  │   └── index.js              -- Entry point of the application
   └── package.json
   </pre>
 
