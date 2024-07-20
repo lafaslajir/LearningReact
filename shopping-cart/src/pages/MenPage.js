@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterProductsByCategory } from '../actions/productActions';
-import { addToCart, removeFromCart, incrementQuantity, decrementQuantity } from '../actions/cartActions'; // Import actions
+import { addToCart, removeFromCart, incrementQuantity, decrementQuantity } from '../actions/cartActions';
 
 const MenPage = () => {
   const dispatch = useDispatch();
@@ -13,7 +13,9 @@ const MenPage = () => {
     dispatch(filterProductsByCategory("men's clothing"));
   }, [dispatch]);
 
-  console.log(products); 
+  console.log("Products: ", products);
+  console.log("Loading: ", loading);
+  console.log("Error: ", error);
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
@@ -37,17 +39,21 @@ const MenPage = () => {
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       <div className="product-list">
-        {products && products.map((product) => (
-          <div key={product.id} className="product-item">
-            <h2>{product.title}</h2>
-            <img src={product.image} alt={product.title} />
-            <p>${product.price}</p>
-            <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
-            <button onClick={() => handleIncrementQuantity(product)}>Increase Quantity</button>
-            <button onClick={() => handleDecrementQuantity(product)}>Decrease Quantity</button>
-            <button onClick={() => handleRemoveFromCart(product)}>Remove from Cart</button>
-          </div>
-        ))}
+        {products && products.length > 0 ? (
+          products.map((product) => (
+            <div key={product.id} className="product-item">
+              <h2>{product.title}</h2>
+              <img src={product.image} alt={product.title} />
+              <p>${product.price}</p>
+              <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
+              <button onClick={() => handleIncrementQuantity(product)}>Increase Quantity</button>
+              <button onClick={() => handleDecrementQuantity(product)}>Decrease Quantity</button>
+              <button onClick={() => handleRemoveFromCart(product)}>Remove from Cart</button>
+            </div>
+          ))
+        ) : (
+          <p>No products available</p>
+        )}
       </div>
     </div>
   );
