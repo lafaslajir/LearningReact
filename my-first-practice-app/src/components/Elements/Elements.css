@@ -1,0 +1,163 @@
+/* Elements.css */
+
+/* Main section styling */
+#main {
+    margin: 2em auto;
+    padding: 2em;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .special header {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  
+  .special h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .special p {
+    font-size: 1.1em;
+    color: #666;
+  }
+  
+  /* List and icon styling */
+  ul, ol {
+    margin-bottom: 2em;
+  }
+  
+  ul li, ol li {
+    padding-left: 1em;
+    margin-bottom: 0.5em;
+  }
+  
+  .alt {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .alt li {
+    padding-left: 0;
+  }
+  
+  .icons {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .icons li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+  
+  .icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background: #333;
+    transition: background 0.3s ease;
+  }
+  
+  .icons a:hover {
+    background: #555;
+  }
+  
+  /* Table styling */
+  .table-wrapper {
+    margin-bottom: 2em;
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 0.75em;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+  
+  table th {
+    background: #f2f2f2;
+  }
+  
+  table td {
+    background: #fff;
+  }
+  
+  table tfoot td {
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  /* Button styling */
+  .actions {
+    margin-bottom: 2em;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .actions li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+  
+  .actions a.button {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .actions a.button:hover {
+    background-color: #0056b3;
+  }
+  
+  .actions.small li {
+    margin-right: 0.5em;
+  }
+  
+  .actions.small a.button {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+  
+  .actions.vertical {
+    display: block;
+  }
+  
+  .actions.vertical li {
+    display: block;
+    margin-bottom: 1em;
+  }
+  
+  .actions.vertical a.button {
+    display: block;
+    width: 100%;
+  }
+  
+  .actions.fit a.button {
+    width: 100%;
+  }
+  
+  .actions.small.vertical li {
+    margin-bottom: 0.5em;
+  }
+  

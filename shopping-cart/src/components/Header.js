@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import '../App.css'; // Assuming your custom CSS is in App.css
-
+import '../App.css'; 
 const Header = () => {
   return (
     <header className="header-area header-sticky">
@@ -23,15 +22,16 @@ const Header = () => {
                   <NavLink to="/women">Women's</NavLink>
                 </li>
                 <li className="scroll-to-section">
-                  <NavLink to="/kids">Kid's</NavLink>
+                  <NavLink to="/electronics">Electronic's</NavLink>
+                </li>
+                <li className="scroll-to-section">
+                  <NavLink to="/jewel">Jewelry's</NavLink>
                 </li>
                 <li className="scroll-to-section">
                   <NavLink to="/cart">Cart</NavLink>
                 </li>
               </ul>
-              <a className="menu-trigger">
-                <span>Menu</span>
-              </a>
+              
             </nav>
           </div>
         </div>

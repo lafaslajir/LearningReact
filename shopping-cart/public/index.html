@@ -4,42 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>React App</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
-  <link rel="stylesheet" href="assets/css/owl-carousel.css">
-  <link rel="stylesheet" href="assets/css/lightbox.css">
+  <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/assets/css/font-awesome.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/templatemo-hexashop.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/owl-carousel.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/lightbox.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/portfolio.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/floating-cart.css">
 </head>
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
-  <script src="assets/js/jquery-2.1.0.min.js"></script>
-  <script src="assets/js/popper.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/accordions.js"></script>
-  <script src="assets/js/datepicker.js"></script>
-  <script src="assets/js/scrollreveal.min.js"></script>
-  <script src="assets/js/waypoints.min.js"></script>
-  <script src="assets/js/jquery.counterup.min.js"></script>
-  <script src="assets/js/imgfix.min.js"></script>
-  <script src="assets/js/slick.js"></script>
-  <script src="assets/js/lightbox.js"></script>
-  <script src="assets/js/isotope.js"></script>
-  <script src="assets/js/custom.js"></script>
-  <script>
-    $(function() {
-      var selectedClass = "";
-      $("p").click(function() {
-        selectedClass = $(this).attr("data-rel");
-        $("#portfolio").fadeTo(50, 0.1);
-        $("#portfolio div").not("." + selectedClass).fadeOut();
-        setTimeout(function() {
-          $("." + selectedClass).fadeIn();
-          $("#portfolio").fadeTo(50, 1);
-        }, 500);
-      });
-    });
-  </script>
+  <script src="%PUBLIC_URL%/assets/js/jquery-2.1.0.min.js"></script>
+  <script src="%PUBLIC_URL%/assets/js/popper.js"></script>
+  <script src="%PUBLIC_URL%/assets/js/bootstrap.min.js"></script>
+  <script src="%PUBLIC_URL%/assets/js/owl-carousel.js"></script>
+  <script src="%PUBLIC_URL%/assets/js/accordions.js"></script>
+  <script src="%PUBLIC_URL%/assets/js/datepicker.js"></script>
+  <script src="%PUBLIC_URL%/assets/js/scrollreveal.min.js"></script>
+  <script src="%PUBLIC_URL%/assets/js/waypoints.min.js"></script>
+  <script src="%PUBLIC_URL%/assets/js/jquery.counterup.min.js"></script>
+  <script src="%PUBLIC_URL%/assets/js/imgfix.min.js"></script>
+  <script src="%PUBLIC_URL%/assets/js/slick.js"></script>
+  <script src="%PUBLIC_URL%/assets/js/lightbox.js"></script>
+  <script src="%PUBLIC_URL%/assets/js/isotope.js"></script>
+  <script src="%PUBLIC_URL%/assets/js/custom.js"></script>
 </body>
 </html>

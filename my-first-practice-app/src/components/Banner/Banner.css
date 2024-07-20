@@ -1,0 +1,41 @@
+/* Banner.css */
+
+#banner {
+    background-color: #fafafa;
+    color: #ffffff;
+    padding: 13em 0 11em 0;
+    background-color: #0c0c0c;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 15% left;
+    text-align: left;
+    position: relative;
+    z-index: 9999;
+}
+
+.inner {
+    max-width: 100em;
+    width: calc(100% - 6em);
+    margin: 0 auto;
+    position: relative;
+    z-index: 10000;
+    line-height: 1.5;
+}
+
+.button-box {
+    margin-top: 2em;
+    padding: 1em 2em;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: inline-block;
+}
+
+.button {
+    color: #070707;
+    text-decoration: none;
+    padding: 0.8em 1.5em;
+    background-color: #f5f3f3;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}

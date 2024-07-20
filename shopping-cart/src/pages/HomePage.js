@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from React Router
+import { Link } from 'react-router-dom';
+import Portfolio from '../components/Portfolio';
 
 const MainPage = () => {
     return (
@@ -67,24 +68,44 @@ const MainPage = () => {
                                     <div className="right-first-image">
                                         <div className="thumb">
                                             <div className="inner-content">
-                                                <h4>Kids</h4>
-                                                <span>Best Clothes For Kids</span>
+                                                <h4>Electronic</h4>
+                                                <span>Best Electronics</span>
                                             </div>
                                             <div className="hover-content">
                                                 <div className="inner">
-                                                    <h4>Kids</h4>
+                                                    <h4>Electronic</h4>
                                                     <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
                                                     <div className="main-border-button">
-                                                        <Link to="/kids">Discover More</Link> 
+                                                        <Link to="/electronics">Discover More</Link> 
                                                     </div>
                                                 </div>
                                             </div>
-                                            <img src="assets/images/baner-right-image-03.jpg" alt="" />
+                                            <img src="assets/images/baner-right-image-05.jpg" alt="" />
                                         </div>
                                     </div>
                                 </div>
-                              
+                                <div className="col-lg-6">
+                                    <div className="right-first-image">
+                                        <div className="thumb">
+                                            <div className="inner-content">
+                                                <h4>Jewelry</h4>
+                                                <span>Best Jewelry</span>
+                                            </div>
+                                            <div className="hover-content">
+                                                <div className="inner">
+                                                    <h4>Jewelry</h4>
+                                                    <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                    <div className="main-border-button">
+                                                        <Link to="/jewel">Discover More</Link> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <img src="assets/images/baner-right-image-06.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
