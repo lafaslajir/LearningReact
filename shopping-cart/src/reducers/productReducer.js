@@ -2,13 +2,13 @@ import {
   FETCH_PRODUCTS_REQUEST,
   FETCH_PRODUCTS_SUCCESS,
   FETCH_PRODUCTS_FAILURE,
-  FILTER_PRODUCTS_BY_CATEGORY
+  FILTER_PRODUCTS_BY_CATEGORY,
 } from '../actions/productActions';
 
 const initialState = {
   loading: false,
   data: [],
-  filteredData: [], 
+  filteredData: [],
   error: null,
 };
 
@@ -17,7 +17,7 @@ const productReducer = (state = initialState, action) => {
     case FETCH_PRODUCTS_REQUEST:
       return { ...state, loading: true, error: null };
     case FETCH_PRODUCTS_SUCCESS:
-      return { ...state, loading: false, data: action.payload, filteredData: action.payload }; 
+      return { ...state, loading: false, data: action.payload, filteredData: action.payload };
     case FETCH_PRODUCTS_FAILURE:
       return { ...state, loading: false, error: action.payload };
     case FILTER_PRODUCTS_BY_CATEGORY:

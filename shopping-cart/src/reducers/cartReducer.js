@@ -1,70 +1,58 @@
-import { ADD_TO_CART, REMOVE_FROM_CART, INCREMENT_QUANTITY, DECREMENT_QUANTITY, CLEAR_CART } from '../actions/cartActions';
-
 const initialState = {
-  items: [],
-  totalAmount: 0,
-};
-
-const cartReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case ADD_TO_CART:
-      const addedItem = action.payload;
-      const existingItem = state.items.find(item => item.id === addedItem.id);
-      if (existingItem) {
-        return {
-          ...state,
-          items: state.items.map(item =>
-            item.id === addedItem.id ? { ...item, quantity: item.quantity + 1 } : item
-          ),
-          totalAmount: state.totalAmount + addedItem.price,
-        };
-      }
-      return {
-        ...state,
-        items: [...state.items, { ...addedItem, quantity: 1 }],
-        totalAmount: state.totalAmount + addedItem.price,
-      };
-
-    case REMOVE_FROM_CART:
-      const removedItem = action.payload;
-      return {
-        ...state,
-        items: state.items.filter(item => item.id !== removedItem.id),
-        totalAmount: state.totalAmount - (removedItem.price * removedItem.quantity),
-      };
-
-    case INCREMENT_QUANTITY:
-      return {
-        ...state,
-        items: state.items.map(item =>
-          item.id === action.payload.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        ),
-        totalAmount: state.totalAmount + action.payload.price,
-      };
-
-    case DECREMENT_QUANTITY:
-      return {
-        ...state,
-        items: state.items.map(item =>
-          item.id === action.payload.id
-            ? { ...item, quantity: Math.max(item.quantity - 1, 1) }
-            : item
-        ),
-        totalAmount: state.totalAmount - action.payload.price,
-      };
-
-    case CLEAR_CART:
-      return {
-        ...state,
-        items: [],
-        totalAmount: 0,
-      };
-
-    default:
-      return state;
-  }
-};
-
-export default cartReducer;
+    items: [],
+    totalAmount: 0,
+  };
+  
+  const cartReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case 'ADD_TO_CART':
+            // Add item to cart
+            return {
+              ...state,
+              items: [...state.items, action.payload],
+              totalAmount: state.totalAmount + action.payload.price,
+            };
+          case 'REMOVE_FROM_CART':
+            // Remove item from cart
+            const updatedItems = state.items.filter(item => item.id !== action.payload.id);
+            const updatedTotalAmount = state.totalAmount - action.payload.price;
+            return {
+              ...state,
+              items: updatedItems,
+              totalAmount: updatedTotalAmount,
+            };
+          case 'INCREMENT_QUANTITY':
+            // Increment quantity of an item in cart
+            const itemToIncrement = state.items.find(item => item.id === action.payload.id);
+            itemToIncrement.quantity += 1;
+            return {
+              ...state,
+              items: [...state.items],
+              totalAmount: state.totalAmount + itemToIncrement.price,
+            };
+          case 'DECREMENT_QUANTITY':
+            // Decrement quantity of an item in cart
+            const itemToDecrement = state.items.find(item => item.id === action.payload.id);
+            if (itemToDecrement.quantity > 1) {
+              itemToDecrement.quantity -= 1;
+              return {
+                ...state,
+                items: [...state.items],
+                totalAmount: state.totalAmount - itemToDecrement.price,
+              };
+            }
+            return state;
+          case 'CLEAR_CART':
+            // Clear entire cart
+            return {
+              ...state,
+              items: [],
+              totalAmount: 0,
+            };
+          default:
+            return state;
+    }
+  };
+  
+  export default cartReducer;
+  
